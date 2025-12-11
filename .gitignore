@@ -1,19 +1,15 @@
-# Ignore Airflow logs and database
-airflow_project/logs/
-airflow_project/pgdata/
-airflow_project/airflow.db
-airflow_project/airflow-webserver.pid
-
-# Ignore Dagster tmp folders
+# Dagster temp folders
 .tmp_dagster_home_*/
 
-# Python cache files
+# Airflow logs & DB
+airflow_project/logs/
+logs/
+airflow.db
+airflow-webserver.pid
+
+# Python cache
 __pycache__/
 *.pyc
 
 # System files
-.DS_Store
-Thumbs.db
-
-# VSCode settings (optional)
-.vscode/
+desktop.ini
