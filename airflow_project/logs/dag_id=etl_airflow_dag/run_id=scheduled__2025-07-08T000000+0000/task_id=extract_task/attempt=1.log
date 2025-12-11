@@ -1,0 +1,17 @@
+[2025-12-11T11:03:14.448+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-11T11:03:14.786+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_airflow_dag.extract_task scheduled__2025-07-08T00:00:00+00:00 [queued]>
+[2025-12-11T11:03:14.839+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_airflow_dag.extract_task scheduled__2025-07-08T00:00:00+00:00 [queued]>
+[2025-12-11T11:03:14.843+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-12-11T11:03:14.908+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_task> on 2025-07-08 00:00:00+00:00
+[2025-12-11T11:03:14.933+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1920) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-11T11:03:14.932+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_***_dag', 'extract_task', 'scheduled__2025-07-08T00:00:00+00:00', '--job-id', '552', '--raw', '--subdir', 'DAGS_FOLDER/etl_***_dag.py', '--cfg-path', '/tmp/tmph80wkyf2']
+[2025-12-11T11:03:14.939+0000] {standard_task_runner.py:63} INFO - Started process 1939 to run task
+[2025-12-11T11:03:14.941+0000] {standard_task_runner.py:91} INFO - Job 552: Subtask extract_task
+[2025-12-11T11:03:15.691+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_airflow_dag.extract_task scheduled__2025-07-08T00:00:00+00:00 [running]> on host b4dba9770d4b
+[2025-12-11T11:03:17.119+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='etl_***_dag' AIRFLOW_CTX_TASK_ID='extract_task' AIRFLOW_CTX_EXECUTION_DATE='2025-07-08T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-07-08T00:00:00+00:00'
+[2025-12-11T11:03:17.125+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-11T11:03:17.929+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-12-11T11:03:17.932+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-11T11:03:18.102+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_***_dag, task_id=extract_task, run_id=scheduled__2025-07-08T00:00:00+00:00, execution_date=20250708T000000, start_date=20251211T110314, end_date=20251211T110318
+[2025-12-11T11:03:18.605+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-11T11:03:18.844+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
