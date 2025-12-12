@@ -2,7 +2,7 @@
 .tmp_dagster_home_*/
 
 # Airflow logs & DB
-airflow_project/logs/
+airflow/logs/
 logs/
 airflow.db
 airflow-webserver.pid
@@ -13,3 +13,22 @@ __pycache__/
 
 # System files
 desktop.ini
+# Ignore Airflow/Dagster/Prefect Logs
+**/logs/
+**/pgdata/
+**/__pycache__/
+**/*.pyc
+
+# Ignore Docker volumes
+airflow/logs/
+airflow/pgdata/
+dagster_home/
+
+# Ignore environment folders
+venv/
+.env/
+.venv/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
