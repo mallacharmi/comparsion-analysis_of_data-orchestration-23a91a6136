@@ -1,36 +1,36 @@
-\# Dagster — ETL Job
+DAGSTER — ETL JOB
+=================
 
 This directory contains the Dagster job definition for the ETL process.
 
----
+------------------------------------------------------------
+START DAGSTER UI
+------------------------------------------------------------
 
-\## 🚀 Start Dagster UI
+Run the following command:
+   dagster dev
 
-dagster dev
+Dagster UI:
+   http://localhost:3000
 
-UI: http://localhost:3000
+------------------------------------------------------------
+RUN JOB
+------------------------------------------------------------
 
----
-\## ▶️ Run Job
-\- Open Dagster UI  
+1. Open Dagster UI
+2. Select: etl_dagster_job
+3. Click: Launch Run
 
-\- Select \*\*etl\_dagster\_job\*\*
+------------------------------------------------------------
+RUN BACKFILL
+------------------------------------------------------------
 
-\- Click \*\*Launch Run\*\*
+Option 1 (UI):
+   Dagster UI → Backfill → Select partitions
 
----
+Option 2 (CLI):
+   dagster job backfill -j etl_dagster_job -p 2025-01-01
 
-\## 📅 Run Backfill
-
-Dagster UI → Backfill → Select partitions  
-
-OR
-
-dagster job backfill -j etl\_dagster\_job -p 2025-01-01
-
----
-
-\# End of dagster README
-
-
-
+------------------------------------------------------------
+END OF DAGSTER README
+------------------------------------------------------------

@@ -1,39 +1,50 @@
-```markdown
-
-\# Apache Airflow — ETL Pipeline
+APACHE AIRFLOW — ETL PIPELINE
+=============================
 
 This folder contains the Airflow DAG implementation of the ETL workflow.
 
----
+------------------------------------------------------------
+RUN AIRFLOW
+------------------------------------------------------------
 
-\## 🚀 Run Airflow
+1. Open terminal and go to the airflow directory:
+   cd airflow
 
-cd airflow
+2. Start Airflow using Docker:
+   docker-compose up --build
 
-docker-compose up --build
+3. Open Airflow UI:
+   http://localhost:8080
 
-Airflow UI: http://localhost:8080  
+4. Login credentials:
+   Username: admin
+   Password: admin
 
-Login: admin / admin  
+5. Enable the DAG:
+   etl_airflow_dag
 
-Enable DAG: \*\*etl\_airflow\_dag\*\*
+------------------------------------------------------------
+TRIGGER DAG MANUALLY
+------------------------------------------------------------
 
----
+Command:
+   airflow dags trigger etl_airflow_dag
 
-\## ▶️ Trigger DAG
+------------------------------------------------------------
+RUN BACKFILL (Required)
+------------------------------------------------------------
 
-airflow dags trigger etl\_airflow\_dag
---
+Command:
+   airflow dags backfill -s 2025-01-01 -e 2025-01-05 etl_airflow_dag
 
-\## 📅 Run Backfill (Required)
+------------------------------------------------------------
+OUTPUT LOCATION
+------------------------------------------------------------
 
-airflow dags backfill -s 2025-01-01 -e 2025-01-05 etl\_airflow\_dag
----
+All processed files and results will be stored in:
 
-\## 📂 Output Location
+   output_airflow/
 
-output\_airflow/
----
-
-\# End of airflow README
-
+------------------------------------------------------------
+END OF AIRFLOW README
+------------------------------------------------------------

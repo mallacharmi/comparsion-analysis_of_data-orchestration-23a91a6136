@@ -1,30 +1,32 @@
-\# Prefect — ETL Flow
+PREFECT — ETL FLOW
+==================
 
 This directory contains the Prefect ETL implementation.
 
----
+------------------------------------------------------------
+RUN THE FLOW
+------------------------------------------------------------
 
-\## ▶️ Run the Flow
+Command:
+   python etl_prefect_flow.py
 
-python etl\_prefect\_flow.py
+------------------------------------------------------------
+BACKFILL
+------------------------------------------------------------
 
----
+Run the flow with backfill (example: last 5 days):
+   python etl_prefect_flow.py --backfill 5
 
-\## 🕒 Backfill
+------------------------------------------------------------
+OPTIONAL: RUN PREFECT SERVER
+------------------------------------------------------------
 
-python etl\_prefect\_flow.py --backfill 5
+Start Prefect server:
+   prefect server start
 
----
+Prefect Dashboard:
+   http://127.0.0.1:4200
 
-\## 🌐 Optional: Run Prefect Server
-
-prefect server start
-
-Dashboard: http://127.0.0.1:4200
-
----
-
-\# End of prefect README
-
-
-
+------------------------------------------------------------
+END OF PREFECT README
+------------------------------------------------------------
